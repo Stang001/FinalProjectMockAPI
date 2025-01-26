@@ -56,6 +56,51 @@ MockAPI เป็นเครื่องมือออนไลน์ที่
 ```
 #### เรียกใช้งาน API:
 - MockAPI จะสร้าง URL ให้ เช่น :
-```Arduino
+```arduino
 https://mockapi.io/users
 ```
+
+# ตัวอย่างการใช้งาน MockAPI
+- 1. ดึงข้อมูลผู้ใช้ทั้งหมด
+```javascript
+fetch('https://mockapi.io/users')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+```
+- 2. เพิ่มผู้ใช้ใหม่
+```javascript
+fetch('https://mockapi.io/users', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        name: 'John Doe',
+        email: 'john@example.com',
+        password: '123456'
+    })
+})
+.then(response => response.json())
+.then(data => console.log('User added:', data))
+.catch(error => console.error('Error:', error));
+```
+- 3.ลบผู้ใช้
+```javascript
+fetch('https://mockapi.io/users/1', {
+    method: 'DELETE'
+})
+.then(() => console.log('User deleted'))
+.catch(error => console.error('Error:', error));
+```
+
+# ประโยชน์ของ RESTful API และ MockAPI
+## RESTful API:
+- โครงสร้างชัดเจน เข้าใจง่าย
+- ใช้งานร่วมกับโปรเจกต์ใดก็ได้
+- ขยายและพัฒนาฟีเจอร์ใหม่ได้ง่าย
+## MockAPI:
+- เริ่มต้นพัฒนาได้ทันที แม้ API จริงยังไม่พร้อม
+- ใช้ทดสอบระบบแบบสมจริง
+- ลดเวลาในการตั้งค่าเซิร์ฟเวอร์
+
