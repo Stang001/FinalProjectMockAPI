@@ -104,3 +104,4 @@ fetch('https://mockapi.io/users/1', {
 - ใช้ทดสอบระบบแบบสมจริง
 - ลดเวลาในการตั้งค่าเซิร์ฟเวอร์
 
+![Alt](https://repobeats.axiom.co/api/embed/727f257398ba5464d0212195cdfab8d09fb5b9bb.svg "Repobeats analytics image")
