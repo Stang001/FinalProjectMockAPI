@@ -61,14 +61,14 @@ https://mockapi.io/users
 ```
 
 # ตัวอย่างการใช้งาน MockAPI
-- 1. ดึงข้อมูลผู้ใช้ทั้งหมด
+- 1.ดึงข้อมูลผู้ใช้ทั้งหมด
 ```javascript
 fetch('https://mockapi.io/users')
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error('Error:', error));
 ```
-- 2. เพิ่มผู้ใช้ใหม่
+- 2.เพิ่มผู้ใช้ใหม่
 ```javascript
 fetch('https://mockapi.io/users', {
     method: 'POST',
